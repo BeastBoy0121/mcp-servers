@@ -1,0 +1,14 @@
+{
+  "name": "mcp-servers",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A growing toolkit of personal Model Context Protocol (MCP) servers.",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "typescript": "^5.7.3",
+    "tsx": "^4.19.2"
+  }
+}
