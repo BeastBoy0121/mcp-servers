@@ -35,6 +35,10 @@ npx @modelcontextprotocol/inspector node dist/index.js
 | `create_issue(repo, title, body?, labels?)` | Create a new issue |
 | `search_code(query, repo?)` | Search code across your repos |
 
+## Known issue
+
+`@modelcontextprotocol/sdk` currently pulls in `zod@3.25.x`, which is affected by a high-severity DoS advisory ([GHSA-mrhx-c7xc-m3w5](https://github.com/advisories/GHSA-mrhx-c7xc-m3w5)) — the fix only landed in zod 4.6.6, which the SDK doesn't support yet. Low practical risk here since this server only talks stdio to a local, trusted client, not untrusted network input. Revisit (`npm audit`) once the SDK bumps its zod dependency.
+
 ## Next steps
 
 This server uses stdio transport, which works for desktop AI clients but not a browser-based frontend. Wiring it into a web UI will mean adding an HTTP/SSE transport — tracked as a separate, later project.
