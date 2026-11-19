@@ -19,3 +19,7 @@ npm run start -w packages/<server-name>
 ```
 
 Each server has its own README with setup, auth, and its tool list.
+
+## Using with Claude Code
+
+This repo ships a project-scoped `.mcp.json` pointing at `github-ops`. Run `npm install && npm run build -w packages/github-ops` once (dist/ isn't committed), then reconnect/restart Claude Code in this folder — it'll prompt to approve the project MCP server on first load.

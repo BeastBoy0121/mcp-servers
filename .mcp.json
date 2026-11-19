@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "github-ops": {
+      "command": "node",
+      "args": ["packages/github-ops/dist/index.js"]
+    }
+  }
+}
